@@ -36,15 +36,40 @@
             <h4>Actions</h4>
             <ol class="list-unstyled">
               <li><a href="/companies/{{$company->id}}/edit">Edit</a></li>
-              <li><a href="#">Delete</a></li>
-              <li><a href="#">Add new member</a></li>
+              <li><a href="/projects/create">Add Project</a></li>
+              <li><a href="/companies">List of Companies</a></li>
+              <li><a href="/companies/create">Create New Company</a></li>
+
+              <br/>
+              <li>
+              <a 
+              href="#"
+                onclick="
+                var result = confirm('Are you sure you wish to delete this project?');
+                    if(result){
+                      event.preventDefault();
+                      document.getElementById('delete-form').submit();
+                    }
+                      "
+                >
+                Delete
+              </a>
+              <form id="delete-form" action="{{ route('companies.destroy',[$company->id]) }}"
+              method="POST" style="display: none;">
+                    <input type="hidden" name="_method" value="delete">
+                    {{ csrf_field() }}
+              </form>
+              
+              
+              </li>
+             <!-- <li><a href="#">Add new member</a></li> -->
             </ol>
           </div>
         
           <div class="sidebar-module">
             <h4>Members</h4>
             <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
+              <li><a href="#"></a></li>
             </ol>
 
 
