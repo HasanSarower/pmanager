@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use App\Project;
 use App\Company;
 use App\ProjectUser;
@@ -61,13 +63,8 @@ class ProjectsController extends Controller
       */
      public function create( $company_id = null )
      {
-         //
-         $companies = null;
-         if(!$company_id){
-            $companies = Company::where('user_id', Auth::user()->id)->get();
-         }
- 
-         return view('projects.create',['company_id'=>$company_id, 'companies'=>$companies]);
+       
+         return view('projects.create',['company_id'=>$company_id]);
      }
  
      /**
