@@ -136,7 +136,7 @@ class ProjectsController extends Controller
       * @param  \App\project  $project
       * @return \Illuminate\Http\Response
       */
-     public function update(Request $request, project $project)
+     public function update(Request $request, Project $project)
      {
         
        //save data

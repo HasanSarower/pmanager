@@ -47,7 +47,7 @@
     <div class="sidebar-module">
         <h4>Actions</h4>
         <ol class="list-unstyled">
-            <li><a href="/projects">List of Companies</a></li>
+            <li><a href="/projects">My projects</a></li>
         </ol>
     </div>
 </div>
