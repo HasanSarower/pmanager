@@ -7,6 +7,7 @@
 
         <form method="post" action="{{ route('companies.update',[$company->id]) }}">
             {{ csrf_field() }}
+            
             <input type="hidden" name="_method" value="put">
 
             <div class="form-group">
