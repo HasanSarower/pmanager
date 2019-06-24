@@ -114,7 +114,8 @@ class ProjectsController extends Controller
  
         // $project = Project::where('id', $project->id )->first();
         $project = Project::find($project->id);
- 
+        
+        
         $comments = $project->comments;
          return view('projects.show', ['project'=>$project, 'comments'=> $comments ]);
      }

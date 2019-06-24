@@ -12,6 +12,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/e6b51fecc0.js"></script>
 </head>
 <body>
     <div id="app">
@@ -46,9 +48,9 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
-                            <li><a href="{{ route('companies.index') }}">My Companies</a></li>
-                            <li><a href="{{ route('projects.index') }}">Projects</a></li>
-                            <li><a href="{{ route('tasks.index') }}">Tasks</a></li>
+                            <li><a href="{{ route('companies.index') }}"><i class="fas fa-building"></i> My Companies</a></li>
+                            <li><a href="{{ route('projects.index') }}"><i class="fas fa-briefcase"></i> Projects</a></li>
+                            <li><a href="{{ route('tasks.index') }}"><i class="fas fa-tasks"></i> Tasks</a></li>
                             
 
                             <li class="dropdown">

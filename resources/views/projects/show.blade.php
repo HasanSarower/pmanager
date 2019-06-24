@@ -14,16 +14,17 @@
     <!-- Example row of columns -->
     <div class="row col-lg-12 col-md-12 col-sm-12" style="background: white; margin: 10px;">
 
-       <!-- <a href="/projects/create/{{$project->id}}" class="pull-right btn btn-default btn-sm">Add Project</a> -->
+        <!-- <a href="/projects/create/{{$project->id}}" class="pull-right btn btn-default btn-sm">Add Project</a> -->
 
         <br/>
+        @include('partials.comments')
 
         <div class="row container-fluid">
 
             <form method="post" action="{{ route('comments.store') }}">
                 {{ csrf_field() }}
 
-                <input type="hidden" name="commentable_type" value="App/Project">
+                <input type="hidden" name="commentable_type" value="App\Project">
                 <input type="hidden" name="commentable_id" value="{{$project->id}}">
 
                 <div>
@@ -46,15 +47,6 @@
                 </div>
             </form>
         </div>
-
-        {{-- @foreach($project->projects as $project)
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <h2>{{$project->name}}</h2>
-            <p class="text-danger">{{$project->description}}</p>
-
-            <p><a class="btn btn-primary" href="/projects/{{$project->id}}" role="button">View Project »</a></p>
-        </div>
-        @endforeach --}}
     </div>
 </div>
 <div class="col-sm-3 col-md-3 pull-right">
