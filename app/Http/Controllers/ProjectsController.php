@@ -63,7 +63,7 @@ class ProjectsController extends Controller
       */
      public function create( $company_id = null )
      {
-         $comapnies = null;
+         $companies = null;
        if(!$company_id ){
            $companies = Company::where('user_id',Auth::user()->id)->get();
        }
